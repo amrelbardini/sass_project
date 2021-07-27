@@ -1,0 +1,9 @@
+$mainColor:#333;
+
+.main{
+    color:$mainColor;
+    .class1{
+        background-color: $mainColor;
+        font-size: 20px;
+    }
+}
