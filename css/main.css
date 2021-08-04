@@ -1,7 +1,247 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+button:focus {
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+/* main colors */
+/* main colors */
+/* common props */
 .main {
-  color: #333; }
-  .main .class1 {
-    background-color: #333;
-    font-size: 20px; }
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main .meals .meal {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.23);
+  margin-bottom: 20px;
+}
+
+.img-fit, .main .meals .img-container {
+  width: 100%;
+  height: 100%;
+}
+
+.col-reset {
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.main .meals .img-container {
+  min-width: 200px;
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-1 {
+  background-image: url("../images/meal-1.jpg");
+}
+
+.img-2 {
+  background-image: url("../images/meal-2.jpg");
+}
+
+.img-3 {
+  background-image: url("../images/meal-3.jpg");
+}
+
+.img-4 {
+  background-image: url("../images/meal-4.jpg");
+}
+
+.img-5 {
+  background-image: url("../images/meal-5.jpg");
+}
+
+.img-6 {
+  background-image: url("../images/meal-6.jpg");
+}
+
+.img-7 {
+  background-image: url("../images/meal-7.jpg");
+}
+
+.main .meals .img-container {
+  width: 280px;
+  min-height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.main .meals .meal-info .heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* common props */
+/*start main section*/
+.main .meals .meal-info .heading h4 {
+  font-size: 18px;
+  color: #2f303c;
+}
+.main .meals .meal-info .date-container .date {
+  color: #000;
+  font-weight: bold;
+  border-right: 2px solid #8f8a97;
+  padding-right: 10px;
+}
+.main .meals .meal-info .date-container .date svg > path {
+  fill: #e8272e;
+}
+.main .meals .meal-info .date-container .comments {
+  padding-left: 15px;
+  font-weight: bold;
+}
+.main .meals .meal-info .date-container .comments svg > path {
+  fill: #e8272e;
+}
+.main .meals .meal-info .text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #8f8a97;
+  font-size: 14px;
+  overflow: hidden;
+}
+.main .meals .meal-info .text p {
+  margin-bottom: 10px;
+}
+.main .meals .meal-info .text .readmore {
+  color: #e8272e;
+}
+.main .meals .meal-info .text .readmore:hover {
+  cursor: pointer;
+}
+
+/*end main section*/
 
 /*# sourceMappingURL=main.css.map */
