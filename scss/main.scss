@@ -170,9 +170,43 @@ $borderRadiusMeals:10px;
     border-top-left-radius:$borderRadiusMeals;
     border-bottom-left-radius:$borderRadiusMeals;
 }
+%postimgprops{
+    width:100%;
+    height: 100px;
+    border-radius: 10px;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 %headingmargin{
     margin-top:20px;
     margin-bottom:10px;
+}
+%sidebarheading{
+    margin-top:30px;
+    margin-bottom:20px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+}
+%date{
+     font-size:$normalTextFont;
+     color: #000;
+    font-weight: bold;
+    border-right:2px solid $normalTextColor;
+    padding-right:10px;
+    svg>path{
+            fill:$mainColor;
+            }
+}
+%comment{
+    font-size:$normalTextFont;
+    padding-left:15px;
+    font-weight: bold;
+    svg>path{
+        fill:$mainColor;
+    }
 }
 .hidden{
     display: none;
@@ -201,20 +235,10 @@ $borderRadiusMeals:10px;
              }
              .date-container{
                  .date{
-                     color: #000;
-                     font-weight: bold;
-                     border-right:2px solid $normalTextColor;
-                     padding-right:10px;
-                     svg>path{
-                         fill:$mainColor;
-                     }
+                    @extend %date;
                  }
                  .comments{
-                     padding-left:15px;
-                     font-weight: bold;
-                     svg>path{
-                         fill:$mainColor;
-                     }
+                   @extend %comment;
                  }
              }
              .text{
@@ -237,3 +261,80 @@ $borderRadiusMeals:10px;
      }
  }
 /*end main section*/
+/* start sidebar section*/
+.main{
+    .sidebar{
+        .search-container{
+            form{
+                margin-top:10px;
+                input.search-field{
+                    border-radius: 20px;
+                    font-weight: 600;
+
+                }
+            }
+            .search{
+                position: absolute;
+                right:20px;
+                padding:0;
+                top:5px;
+            }
+        }
+        .categories{
+            .heading-container{
+                @extend %sidebarheading;
+            }
+            .cat{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                margin-bottom:20px;
+                .name{
+                    color:$normalTextColor;
+                    font-size:$normalTextFont+3;
+                    svg{
+                        margin-right:5px;
+                    }
+                }
+                .number{
+                    color:$normalTextColor;
+                    font-size:$normalTextFont+3;
+                }
+            }
+        }
+        .recent-posts{
+                   
+            .heading-container{@extend %sidebarheading;}
+            .post{
+                border-bottom:1px solid #ccc;
+                padding-bottom:20px; 
+                margin-top:20px;
+                @for $i from 1 through 3{
+                    .img-holder-#{$i}{
+                        background-image:url(../images/meal-#{$i}.jpg);
+                        @extend %postimgprops;      
+                    }
+                }
+                .info-heading{
+                    h5{
+                        font-size:$headingFont;
+                        margin-bottom:15px;
+                    }
+                } 
+                .date-container{
+                    
+                    .date{
+                        @extend %date;
+                        
+                    }
+                    .comments{
+                        @extend %comment;
+                       
+                    }
+                } 
+            
+            }
+        }
+    }
+}
+/*end sidebar section */

@@ -194,9 +194,47 @@ select {
   border-bottom-left-radius: 10px;
 }
 
+.main .sidebar .recent-posts .post .img-holder-3, .main .sidebar .recent-posts .post .img-holder-2, .main .sidebar .recent-posts .post .img-holder-1 {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .main .meals .meal-info .heading {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.main .sidebar .recent-posts .heading-container, .main .sidebar .categories .heading-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.main .sidebar .recent-posts .post .date-container .date, .main .meals .meal-info .date-container .date {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  border-right: 2px solid #8f8a97;
+  padding-right: 10px;
+}
+.main .sidebar .recent-posts .post .date-container .date svg > path, .main .meals .meal-info .date-container .date svg > path {
+  fill: #e8272e;
+}
+
+.main .sidebar .recent-posts .post .date-container .comments, .main .meals .meal-info .date-container .comments {
+  font-size: 14px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+.main .sidebar .recent-posts .post .date-container .comments svg > path, .main .meals .meal-info .date-container .comments svg > path {
+  fill: #e8272e;
 }
 
 .hidden {
@@ -208,22 +246,6 @@ select {
 .main .meals .meal-info .heading h4 {
   font-size: 18px;
   color: #2f303c;
-}
-.main .meals .meal-info .date-container .date {
-  color: #000;
-  font-weight: bold;
-  border-right: 2px solid #8f8a97;
-  padding-right: 10px;
-}
-.main .meals .meal-info .date-container .date svg > path {
-  fill: #e8272e;
-}
-.main .meals .meal-info .date-container .comments {
-  padding-left: 15px;
-  font-weight: bold;
-}
-.main .meals .meal-info .date-container .comments svg > path {
-  fill: #e8272e;
 }
 .main .meals .meal-info .text {
   margin-top: 10px;
@@ -243,5 +265,55 @@ select {
 }
 
 /*end main section*/
+/* start sidebar section*/
+.main .sidebar .search-container form {
+  margin-top: 10px;
+}
+.main .sidebar .search-container form input.search-field {
+  border-radius: 20px;
+  font-weight: 600;
+}
+.main .sidebar .search-container .search {
+  position: absolute;
+  right: 20px;
+  padding: 0;
+  top: 5px;
+}
+.main .sidebar .categories .cat {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.main .sidebar .categories .cat .name {
+  color: #8f8a97;
+  font-size: 17px;
+}
+.main .sidebar .categories .cat .name svg {
+  margin-right: 5px;
+}
+.main .sidebar .categories .cat .number {
+  color: #8f8a97;
+  font-size: 17px;
+}
+.main .sidebar .recent-posts .post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.main .sidebar .recent-posts .post .img-holder-1 {
+  background-image: url(../images/meal-1.jpg);
+}
+.main .sidebar .recent-posts .post .img-holder-2 {
+  background-image: url(../images/meal-2.jpg);
+}
+.main .sidebar .recent-posts .post .img-holder-3 {
+  background-image: url(../images/meal-3.jpg);
+}
+.main .sidebar .recent-posts .post .info-heading h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+/*end sidebar section */
 
 /*# sourceMappingURL=main.css.map */
