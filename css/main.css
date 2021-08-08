@@ -159,32 +159,16 @@ select {
   background-position: center;
 }
 
-.img-1 {
-  background-image: url("../images/meal-1.jpg");
-}
-
-.img-2 {
-  background-image: url("../images/meal-2.jpg");
-}
-
-.img-3 {
-  background-image: url("../images/meal-3.jpg");
-}
-
-.img-4 {
-  background-image: url("../images/meal-4.jpg");
-}
-
-.img-5 {
-  background-image: url("../images/meal-5.jpg");
-}
-
-.img-6 {
-  background-image: url("../images/meal-6.jpg");
-}
-
-.img-7 {
-  background-image: url("../images/meal-7.jpg");
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2b2c38;
+  opacity: 0.5;
 }
 
 .main .meals .img-container {
@@ -194,7 +178,7 @@ select {
   border-bottom-left-radius: 10px;
 }
 
-.main .sidebar .recent-posts .post .img-holder-3, .main .sidebar .recent-posts .post .img-holder-2, .main .sidebar .recent-posts .post .img-holder-1 {
+.main .sidebar .instagram .image-container .img-9, .main .sidebar .instagram .image-container .img-8, .main .sidebar .instagram .image-container .img-7, .main .sidebar .instagram .image-container .img-6, .main .sidebar .instagram .image-container .img-5, .main .sidebar .instagram .image-container .img-4, .main .sidebar .instagram .image-container .img-3, .main .sidebar .instagram .image-container .img-2, .main .sidebar .instagram .image-container .img-1, .main .sidebar .book-now .book, .main .sidebar .recent-posts .post .img-holder-3, .main .sidebar .recent-posts .post .img-holder-2, .main .sidebar .recent-posts .post .img-holder-1 {
   width: 100%;
   height: 100px;
   border-radius: 10px;
@@ -210,7 +194,7 @@ select {
   margin-bottom: 10px;
 }
 
-.main .sidebar .recent-posts .heading-container, .main .sidebar .categories .heading-container {
+.main .sidebar .instagram .heading-container, .main .sidebar .recent-posts .heading-container, .main .sidebar .categories .heading-container {
   margin-top: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
@@ -243,6 +227,33 @@ select {
 
 /* common props */
 /*start main section*/
+.main .meals .img-1 {
+  background-image: url("../images/meal-1.jpg");
+}
+.main .meals .img-2 {
+  background-image: url("../images/meal-2.jpg");
+}
+.main .meals .img-3 {
+  background-image: url("../images/meal-3.jpg");
+}
+.main .meals .img-4 {
+  background-image: url("../images/meal-4.jpg");
+}
+.main .meals .img-5 {
+  background-image: url("../images/meal-5.jpg");
+}
+.main .meals .img-6 {
+  background-image: url("../images/meal-6.jpg");
+}
+.main .meals .img-7 {
+  background-image: url("../images/meal-7.jpg");
+}
+.main .meals .img-8 {
+  background-image: url("../images/meal-8.jpg");
+}
+.main .meals .img-9 {
+  background-image: url("../images/meal-9.jpg");
+}
 .main .meals .meal-info .heading h4 {
   font-size: 18px;
   color: #2f303c;
@@ -314,6 +325,100 @@ select {
   font-size: 18px;
   margin-bottom: 15px;
 }
+.main .sidebar .book-now .book {
+  z-index: 1;
+  width: 100%;
+  margin-top: 20px;
+  height: 300px;
+  background-image: url(../images/meal-1.jpg);
+}
+.main .sidebar .book-now .book .overlay {
+  border-radius: 10px;
+}
+.main .sidebar .book-now .book .content {
+  z-index: 2;
+  padding: 10px;
+}
+.main .sidebar .book-now .book .content h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.main .sidebar .book-now .book .content h2 span {
+  color: #e8272e;
+  font-size: 60px;
+}
+.main .sidebar .book-now .book .content p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .sidebar .book-now .book .content a {
+  text-decoration: none;
+  width: 200px;
+  background-color: #e8272e;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 28px;
+  border-radius: 20px;
+}
+.main .sidebar .instagram .heading-container {
+  font-size: 18px;
+}
+.main .sidebar .instagram .image-container .img-1 {
+  background-image: url(../images/meal-1.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-2 {
+  background-image: url(../images/meal-2.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-3 {
+  background-image: url(../images/meal-3.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-4 {
+  background-image: url(../images/meal-4.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-5 {
+  background-image: url(../images/meal-5.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-6 {
+  background-image: url(../images/meal-6.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-7 {
+  background-image: url(../images/meal-7.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-8 {
+  background-image: url(../images/meal-8.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+.main .sidebar .instagram .image-container .img-9 {
+  background-image: url(../images/meal-9.jpg);
+  margin-bottom: 10px;
+  padding: 2px;
+  display: block;
+}
+
 /*end sidebar section */
 
 /*# sourceMappingURL=main.css.map */

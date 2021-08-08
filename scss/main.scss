@@ -159,10 +159,16 @@ $borderRadiusMeals:10px;
              background-position: center;
           
 }
-@for $i from 1 through 7 {
-    .img-#{$i}{
-        background-image:url("../images/meal-#{$i}.jpg");
-    }
+.overlay{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:#2b2c38;
+    opacity: 0.5;
 }
 %imgProps{
     width:280px;
@@ -216,7 +222,12 @@ $borderRadiusMeals:10px;
 /*start main section*/
  .main{
      @extend %marginTopBot;
-     .meals{ 
+     .meals{
+        @for $i from 1 through 9 {
+            .img-#{$i}{
+                background-image:url("../images/meal-#{$i}.jpg");
+            }
+        } 
          .meal{
             @extend %mealCardCommonProp;   
          }
@@ -270,7 +281,6 @@ $borderRadiusMeals:10px;
                 input.search-field{
                     border-radius: 20px;
                     font-weight: 600;
-
                 }
             }
             .search{
@@ -305,6 +315,7 @@ $borderRadiusMeals:10px;
         .recent-posts{
                    
             .heading-container{@extend %sidebarheading;}
+            
             .post{
                 border-bottom:1px solid #ccc;
                 padding-bottom:20px; 
@@ -333,6 +344,64 @@ $borderRadiusMeals:10px;
                     }
                 } 
             
+            }
+           
+        }
+        .book-now{
+            .book{
+                z-index: 1;
+                @extend %postimgprops;
+                width: 100%;
+                margin-top: 20px;
+                height: 300px;
+                background-image: url(../images/meal-1.jpg);
+               .overlay{
+                border-radius:$borderRadiusMeals;
+               }
+               .content{
+                   z-index: 2;
+                   padding:10px;
+                   h2{
+                       color:$subscribeColor;
+                       span{
+                           color:$mainColor;
+                           font-size:60px;
+                       }
+                       margin-bottom:10px;
+                   }
+                   p{
+                       color:$subscribeColor;
+                       font-size:$headingFont;
+                       font-weight: bold;
+                   }
+                   a{
+                        text-decoration: none;
+                        width:200px;
+                        background-color:$mainColor;
+                        color:$subscribeColor;
+                        margin-top:20px;
+                        font-size:$headingFont+10;
+                        border-radius: $borderRadiusMeals+10;
+                    }
+               }
+            }
+        }
+        .instagram{
+            .heading-container{
+                @extend %sidebarheading;
+                font-size: $headingFont;
+            }
+            .image-container{
+                @for $i from 1 through 9{
+                    .img-#{$i}{
+                        background-image:url(../images/meal-#{$i}.jpg);
+                        margin-bottom: 10px;
+                        padding:2px;
+                        display: block;
+                        @extend %postimgprops;
+                    }
+                }
+
             }
         }
     }
