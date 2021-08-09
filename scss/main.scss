@@ -126,6 +126,7 @@ $headingFont:18px;
 $subscribeColor:#fff;
 $mealCardBackground:#f9f9f9;
 $borderRadiusMeals:10px;
+$tagsColor:#f4f4f4;
 /* main colors */
 
 /* common props */
@@ -214,6 +215,26 @@ $borderRadiusMeals:10px;
         fill:$mainColor;
     }
 }
+%tagprops{
+   background-color:$tagsColor;
+   color:$headingColor;
+   border-radius: 20px;
+   margin-bottom:10px;
+   text-align: center;
+   padding:5px;
+   font-weight: 600;
+   font-style: italic;
+   &:hover{
+       background-color:$mainColor;
+       color:$subscribeColor;
+       -webkit-transition:all .5s ease-in-out;
+       -moz-transition:all .5s ease-in-out;
+       -o-transition:all .5s ease-in-out;
+       transition: all .5s ease-in-out;
+       cursor: pointer;
+
+   }
+}
 .hidden{
     display: none;
 }
@@ -229,7 +250,11 @@ $borderRadiusMeals:10px;
             }
         } 
          .meal{
-            @extend %mealCardCommonProp;   
+            @extend %mealCardCommonProp; 
+            min-height: 220px; 
+            .row.col-reset{
+                min-height: 220px;
+            } 
          }
          .img-container{
              @extend .img-fit;
@@ -263,11 +288,28 @@ $borderRadiusMeals:10px;
                  }
                  .readmore{
                      color:$mainColor;
+                     font-weight: 600;
                      &:hover{
                          cursor: pointer;
                      }
                  }
              }
+         }
+     }
+     .pagination-holder{
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         .page-link{
+             border-radius: 50%;
+             margin-left:5px;
+             margin-right:5px;
+             color:$normalTextColor;
+         }
+         .page-link.active{
+            background-color: $mainColor;
+            color:$subscribeColor;
+            border-color:$mainColor;
          }
      }
  }
@@ -402,6 +444,25 @@ $borderRadiusMeals:10px;
                     }
                 }
 
+            }
+        }
+        .tags{
+            .heading-container{
+                @extend %sidebarheading;
+                font-size: $headingFont;
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
+            }
+            .content{
+                @for $i from 1 through 8{
+                    .tag-#{$i}{
+                        @extend %tagprops;
+ 
+                    }
+                    
+                }
             }
         }
     }

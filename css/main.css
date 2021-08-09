@@ -194,7 +194,7 @@ select {
   margin-bottom: 10px;
 }
 
-.main .sidebar .instagram .heading-container, .main .sidebar .recent-posts .heading-container, .main .sidebar .categories .heading-container {
+.main .sidebar .tags .heading-container, .main .sidebar .instagram .heading-container, .main .sidebar .recent-posts .heading-container, .main .sidebar .categories .heading-container {
   margin-top: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
@@ -219,6 +219,26 @@ select {
 }
 .main .sidebar .recent-posts .post .date-container .comments svg > path, .main .meals .meal-info .date-container .comments svg > path {
   fill: #e8272e;
+}
+
+.main .sidebar .tags .content .tag-8, .main .sidebar .tags .content .tag-7, .main .sidebar .tags .content .tag-6, .main .sidebar .tags .content .tag-5, .main .sidebar .tags .content .tag-4, .main .sidebar .tags .content .tag-3, .main .sidebar .tags .content .tag-2, .main .sidebar .tags .content .tag-1 {
+  background-color: #f4f4f4;
+  color: #2f303c;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 600;
+  font-style: italic;
+}
+.main .sidebar .tags .content .tag-8:hover, .main .sidebar .tags .content .tag-7:hover, .main .sidebar .tags .content .tag-6:hover, .main .sidebar .tags .content .tag-5:hover, .main .sidebar .tags .content .tag-4:hover, .main .sidebar .tags .content .tag-3:hover, .main .sidebar .tags .content .tag-2:hover, .main .sidebar .tags .content .tag-1:hover {
+  background-color: #e8272e;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .hidden {
@@ -254,6 +274,12 @@ select {
 .main .meals .img-9 {
   background-image: url("../images/meal-9.jpg");
 }
+.main .meals .meal {
+  min-height: 220px;
+}
+.main .meals .meal .row.col-reset {
+  min-height: 220px;
+}
 .main .meals .meal-info .heading h4 {
   font-size: 18px;
   color: #2f303c;
@@ -270,9 +296,26 @@ select {
 }
 .main .meals .meal-info .text .readmore {
   color: #e8272e;
+  font-weight: 600;
 }
 .main .meals .meal-info .text .readmore:hover {
   cursor: pointer;
+}
+.main .pagination-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main .pagination-holder .page-link {
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #8f8a97;
+}
+.main .pagination-holder .page-link.active {
+  background-color: #e8272e;
+  color: #fff;
+  border-color: #e8272e;
 }
 
 /*end main section*/
@@ -418,7 +461,13 @@ select {
   padding: 2px;
   display: block;
 }
-
+.main .sidebar .tags .heading-container {
+  font-size: 18px;
+}
+.main .sidebar .tags a {
+  text-decoration: none;
+  color: inherit;
+}
 /*end sidebar section */
 
 /*# sourceMappingURL=main.css.map */
